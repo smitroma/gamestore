@@ -57,3 +57,5 @@ function create_block_blocks_gamestore_block_init() {
 	}
 }
 add_action( 'init', 'create_block_blocks_gamestore_block_init' );
+/***** test */
+
