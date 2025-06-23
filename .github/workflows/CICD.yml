@@ -27,3 +27,5 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         source: "./wpcontent.zip"
         target: ${{ github.event_name == 'push' &&  '/www/bestweb.in.ua/wp-content/test' }}
+
+        
