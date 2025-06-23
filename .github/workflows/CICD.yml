@@ -27,13 +27,3 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         source: "./wpcontent.zip"
         target: ${{ github.event_name == 'push' &&  '/www/bestweb.in.ua/wp-content/test' }}
-
-    - name: Copy files manually via SCP
-      uses: appleboy/ssh-action@master
-      with:
-       host: ${{ secrets.SSH_HOST }}
-       username: ${{ secrets.SSH_USER }}
-       password: ${{ secrets.SSH_PASSWORD }}
-       script: |
-      if not exist "C:\www\bestweb.in.ua\wp-content\test" mkdir "C:\www\bestweb.in.ua\wp-content\test"
-      REM Use PowerShell or robocopy to copy files
